@@ -1,0 +1,68 @@
+# List of modules that you want to include in your initramfs.
+# They will be loaded at boot time in the order below.
+#
+# Syntax:  module_name [args ...]
+#
+# You must run update-initramfs(8) to effect this change.
+#
+# Examples:
+#
+# raid1
+# sd_mod
+
+af_alg
+blake2b_generic
+btrfs
+crct10dif_ce
+dm_crypt
+dm_mod
+drm
+drm_display_helper
+drm_dp_aux_bus
+drm_kms_helper
+ecc
+ecdh_generic
+fastrpc
+fuse
+gpu_sched
+hid_multitouch
+i2c_hid
+i2c_hid_of
+i2c_qcom_geni
+icc_osm_l3
+led_class_multicolor
+leds_qcom_lpg
+libarc4
+libcrc32c
+llc
+lmh
+mdt_loader
+nvme
+nvme_core
+pcie_qcom
+phy_qcom_edp
+phy_qcom_qmp_combo
+phy_qcom_qmp_pcie
+phy_qcom_snps_femto_v2
+qcom_common
+qcom_glink_smem
+qcom_pil_info
+qcom_pon
+qcom_q6v5
+qcom_q6v5_pas
+qcom_spmi_adc5
+qcom_spmi_temp_alarm
+qcom_sysmon
+qcom_vadc_common
+qmi_helpers
+qrtr
+qrtr_smd
+rmtfs_mem
+rpmsg_char
+rtc_pm8xxx
+socinfo
+typec
+ufs_qcom
+xor
+xor_neon
+zstd_compress

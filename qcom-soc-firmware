@@ -1,0 +1,21 @@
+#!/bin/sh
+
+PREREQ=""
+
+prereqs()
+{
+    echo "$PREREQ"
+}
+
+case $1 in
+# get pre-requisites
+prereqs)
+    prereqs
+    exit 0
+    ;;
+esac
+
+. /usr/share/initramfs-tools/hook-functions
+mkdir -p ${DESTDIR}/lib/firmware/qcom/LENOVO/21BX || true
+cp -pnLR /lib/firmware/qcom/LENOVO/21BX/* ${DESTDIR}/lib/firmware/qcom/LENOVO/21BX/
+chmod 644 ${DESTDIR}/lib/firmware/qcom/LENOVO/21BX/*
