@@ -143,7 +143,7 @@ mkdir $WORK_DIR/image/isolinux/dtb
 #cp $WORK_DIR/chroot/usr/lib/linux-image-*/apple/*.dtb $WORK_DIR/image/isolinux/dtb
 #cp $WORK_DIR/chroot/usr/lib/linux-image-*/apple/*.dtb $WORK_DIR/image/isolinux/dtb
 #cp $WORK_DIR/chroot/usr/lib/linux-image-*/apple/*.dtb $WORK_DIR/image/isolinux/dtb
-cp $WORK_DIR/chroot/usr/lib/linux-image-*/qcom/sc8280xp-lenovo-thinkpad-x13s.dtb $WORK_DIR/image/isolinux/dtb/f0003484-35c0-5bcb-966e-3583aa9529c2.dtb
+cp $WORK_DIR/chroot/usr/lib/linux-image-*/qcom/sc8280xp-lenovo-thinkpad-x13s.dtb $WORK_DIR/image/isolinux/dtb/f249803d-0d95-54f3-a28f-f26c14a03f3b.dtb
 
 # copy kernel
 cp $WORK_DIR/chroot/boot/vmlinuz-* $WORK_DIR/image/casper/vmlinuz
@@ -155,7 +155,7 @@ cp $WORK_DIR/chroot/boot/initrd.img-* $WORK_DIR/image/casper/initrd
     dd if=/dev/zero of=efiboot.img bs=1M count=10 && \
     sudo mkfs.vfat efiboot.img && \
     LC_CTYPE=C mmd -i efiboot.img dtb efi efi/boot && \
-    LC_CTYPE=C mcopy -i efiboot.img ./dtb/f0003484-35c0-5bcb-966e-3583aa9529c2.dtb ::dtb/ && \
+    LC_CTYPE=C mcopy -i efiboot.img ./dtb/f249803d-0d95-54f3-a28f-f26c14a03f3b.dtb ::dtb/ && \
     LC_CTYPE=C mcopy -i efiboot.img ./grubaa64.efi ::efi/boot/ && \
     LC_CTYPE=C mcopy -i efiboot.img ./bootaa64.efi ::efi/boot/
 )
